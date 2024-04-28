@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    /*background-color: skyblue;*/
+    /*Añadir foto de fondo sustituyendo al color*/
+    background-image: url(img/smartFarmOpacidad75.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+}
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+header{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: rgb(137, 66, 188);
+    border-radius: 5px;
+    padding: 0 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+}
+header .logo:hover{
+    color: rgb(137, 66, 188);
+    background: #fff;
+    transition: 1s;
+}
+header .navbar{
+    position: relative;
+    display: flex; 
+}
+header .navbar li{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navbar li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+header .navbar li a:hover{
+    border-bottom: 5px solid rgb(137, 66, 188);
+    padding: 2px;
+}
+
+/*Contenido de la web*/
+
+.contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+.contenido .tituloBox{
+    position: relative;
+    max-width: 750px;
+    text-align: center;
+}
+.contenido .tituloBox h2{
+    font-size: 4.5em;
+    text-transform: uppercase;
+    color: white;
+}
+.contenido .tituloBox h2 span{
+    background-color: rgb(137, 66, 188);
+    color: white;
+    padding: 0 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.contenido .tituloBox p{
+    font-size: 1.8em;
+    line-height: 1.5;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.contenido .tituloBox a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(137, 66, 188);
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: left 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.contenido .tituloBox a:hover{
+    color: #fff;
+    background-color: rgb(137, 66, 188);
+    transition: 0.5s;
+}
+
+.contenido .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: -50px;
+    z-index: -5;
+}
+.contenido .imgBox img{
+    height: 75vh;
+    position: absolute;
+    top: -120px;
+    left: 800px;
+    border: 3px;
+    border-color: rgb(137, 66, 188);
+    border-style: solid;
+    border-radius: 360px;
+}
+
+/*Copyright*/
+
+.copyright{
+    position: absolute;
+    bottom: 0px;
+    left: 800px;
+    margin-bottom: 20px;
+    padding: 0 100px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright p{
+    color: #fff;
+    text-align: center;
+    margin-left: 100px;
+}
+
+/*Redes sociales*/
+
+.redesSociales{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+}
+
+.redesSociales li{
+    padding: 10px;
+}
+.redesSociales li a{
+    color: white;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+.redesSociales li:hover a{
+    color: rgb(137, 66, 188);
+}
+
+/*Circulo*/
+
+.circulo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(2, 112, 108, 0.386);
+    clip-path: circle(650px at right 800px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+
+/* Estilos para pantallas más pequeñas que 992px */
+@media only screen and (max-width: 992px) {
+    header {
+        padding: 20px 50px; /* Ajusta el padding del encabezado */
+    }
+    .contenido {
+        flex-direction: column; /* Cambia la dirección del flexbox para apilar los elementos verticalmente */
+        align-items: center; /* Centra los elementos verticalmente */
+        padding: 50px 20px; /* Ajusta el padding */
+    }
+    .contenido .tituloBox {
+        max-width: 100%; /* Utiliza el ancho máximo disponible */
+        text-align: center; /* Centra el texto */
+    }
+    .contenido .imgBox {
+        width: 100%; /* Utiliza el ancho completo disponible */
+        justify-content: center; /* Centra la imagen horizontalmente */
+        padding-right: 0; /* Elimina el padding derecho */
+    }
+    .contenido .imgBox img {
+        position: static; /* Restaura la posición por defecto */
+        height: auto; /* Restaura la altura automática */
+        width: 100%; /* Utiliza el ancho completo */
+        margin-top: 20px; /* Agrega un margen superior */
+        left: 0; /* Restaura la posición por defecto */
+    }
+    .redesSociales,
+    .copyright {
+        left: 0; /* Restaura la posición por defecto */
+        padding: 0 20px 30px; /* Ajusta el padding */
+    }
+}
+
+/* Estilos para pantallas más pequeñas que 576px */
+@media only screen and (max-width: 576px) {
+    header {
+        padding: 20px; /* Ajusta el padding del encabezado */
+    }
+    .contenido {
+        padding: 30px; /* Ajusta el padding */
+    }
+    .contenido .imgBox img {
+        margin-top: 10px; /* Reduce el margen superior */
+    }
+    .redesSociales,
+    .copyright {
+        padding: 0 10px 30px; /* Ajusta el padding */
+    }
+}

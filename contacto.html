@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/imagen_portada.png" type="image/x-icon">
+    <title>Contacto</title>
+    <style>
+        body{
+            text-align: left;
+            background-image: url(img/smartFarmOpacidad75.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: rgb(137, 66, 188);
+            font-family: Helvetica;
+        }
+        .logo{
+            color: white;
+            align-content: center;
+            font-size: 1.5em;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: rgb(137, 66, 188);
+            border-radius: 5px;
+            padding: 0 10px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            display: block;
+            margin-left:85px;
+            width: fit-content;
+        }
+        .logo:hover{
+            color: rgb(137, 66, 188);
+            background: #fff;
+            transition: 1s;
+        }
+        fieldset{
+            border-color: rgb(137, 66, 188);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="mailto:agrobotGPT@outlook.com" method="post" name="formulario">
+
+        <fieldset>
+        <legend><h2>Formulario de contacto</h2></legend>
+        <legend><b>Datos personales:</b></legend>
+        <br>
+        Nombre:
+        <input type="text" name="nombre" required>
+        <br> 
+        Apellidos:
+        <input type="text" name="apellidos" required>
+        <br>
+        Correo electrónico:
+        <input type="email" name="" required>
+        <br>
+        <br>
+        <b>Comentarios:</b>
+        <br>
+        <textarea name="comentarios" id="" cols="30" rows="10" maxlength="240"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reset">
+        <input type="file" name="Archivos">
+
+    </fieldset>
+
+    </form>
+    <br>
+    <a href="index.html" class="logo">Inicio</a>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/imagen_portada.png" type="image/x-icon">
+    <title>Proyectos</title>
+    <style>
+        body{
+            background-image: url(img/smartFarmOpacidad50.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: "Montserrat", sans-serif;
+            color: rgb(137, 66, 188);
+            size: 20px;
+            text-align: center;
+        }
+        hr{
+            margin: 20px 0;
+            border: 0;
+            border-top: 1px solid rgb(137, 66, 188);
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        li{
+            margin-bottom: 20px;
+        }
+        .logo{
+            color: white;
+            align-content: center;
+            font-size: 1.5em;
+            text-decoration: none;
+            text-transform: uppercase;
+            background-color: rgb(137, 66, 188);
+            border-radius: 5px;
+            padding: 0 10px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 600;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+        .logo:hover{
+            color: rgb(137, 66, 188);
+            background: #fff;
+            transition: 1s;
+        }
+        a{
+            text-decoration: none;
+            color: rgb(137, 66, 188);
+        }
+        section {
+        max-width: 1750px;
+        }
+
+        .lasnoticias {
+            width: 100%;
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .noticia {
+            background-color: rgb(218, 253, 251);
+            padding: 32px 64px;
+            border-top: 10px solid rgb(137, 66, 188);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 500px;
+            max-width: 90%;
+            min-height: 600px;
+            align-items: center;
+            margin: 50px 40px 30px 40px;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            position: relative;
+            transition: 0.5s;
+            text-align: justify;
+            /*Para que no se sobresalga el texto del recuadro de la noticia cuando éste sea más grande*/
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        /*Gira 180º la caja desde su eje Y*/
+        .noticia:hover {
+            transform: rotateY(180deg);
+        }
+
+        .noticia p {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: black;
+            font-size: 18px;
+
+            /*Información sacada de recursos de internet con el objetivo de conseguir una animación
+            que pudiera funcionar como tarjeta de doble cara para hacer más dinámicas las noticias. Está
+            en negativo para que no aparezca el texto invertido y el translate permite que el contenido aparezca
+            centrado en el eje de la caja y no desperdigado por la página*/
+            transform: translate(-50%, -50%) rotateY(-180deg); 
+        }
+
+        .noticia h5 {
+            margin-bottom: 95px;
+            margin-left: 240px;
+        }
+
+        .noticia:hover p {
+            display: block; 
+        }
+
+        .imgnoticia1, 
+        .imgnoticia2, 
+        .imgnoticia3, 
+        .imgnoticia4 {
+            width: 600px;
+            max-width: 130%;
+            height: 400px;
+        }
+
+        /*La opacidad al 0 ha sido necesaria para que al girar la caja el contenido previo no se siguiera mostrando*/
+        .noticia:hover .imgnoticia1,
+        .noticia:hover .imgnoticia2,
+        .noticia:hover .imgnoticia3,
+        .noticia:hover .imgnoticia4,
+        .noticia:hover .titulonoticia {
+            opacity: 0; 
+        }
+
+        .noticia:hover h2 {
+            opacity: 0;
+        }
+
+        .noticia:hover h5 {
+            opacity: 0;
+        }
+
+        /*querries*/
+        @media (min-width: 577px) and (max-width: 768px) {
+        }
+
+        @media (max-width: 576px) {
+            .imgnoticia1, 
+            .imgnoticia2, 
+            .imgnoticia3, 
+            .imgnoticia4 {
+                height: 190px;
+                min-height: 190px;
+                width: 280px;
+                min-width: 280px;
+                margin-bottom: 20px;
+            }
+            .noticia h5 {
+                margin: 20px 0px 30px 0px;
+                margin-left: 100px;
+            }
+            .noticia h2 {
+                font-size: 17px;
+            }
+            .noticia {
+                padding: 16px 32px;
+                min-height: 150px;
+                min-height: 231px;
+                min-width: 316px;
+                margin: 20px;
+            }
+            .noticia p {
+                top: 30%;
+                bottom: 20%;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <h1>Algunos de mis proyectos</h1>
+    <hr>
+    <div class="marginBox"></div>
+
+        <section>
+            <div class="lasnoticias center">
+                <div class="noticia">
+                    <h2 class="titulonoticia">Diseño página web UNIR FP</h2>
+                    <h5 class="fecha"> Diciembre 2023 </h5>
+                    <img class="imgnoticia1" src="img/pagina unir.jpg">
+                    <p>Propuesta de una página web para las titulaciones IT de UNIR FP.
+                        <br>
+                        <br>
+                        <a href="https://salroal.github.io/webActividad1/" target="_blank">Pincha aquí para verla</a>
+                    </p>
+                </div>
+                <div class="noticia">
+                    <h2 class="titulonoticia">Diseño página web Breaking Bad</h2>
+                    <h5 class="fecha"> Marzo 2024 </h5>
+                    <img class="imgnoticia1" src="img/pagina breaking bad.jpg">
+                    <p>Propuesta de una página web dedicada a la serie Breaking Bad.
+                        <br>
+                        <br>
+                        <a href="https://salroal.github.io/web/" target="_blank">Pincha aquí para verla</a>
+                    </p>
+                </div>
+                <div class="noticia">
+                    <h2 class="titulonoticia">Diseño página web Bodega Tierra de vinos</h2>
+                    <h5 class="fecha"> Abril 2024 </h5>
+                    <img class="imgnoticia3" src="img/pagina bodega.jpg">
+                    <p>Propuesta de una página web para una bodega.
+                        <br>
+                        <br>
+                        <a href="https://salroal.github.io/bodega/" target="_blank">Pincha aquí para verla</a>
+                    </p>
+                </div>
+                <div class="paralelas"></div>
+                <div class="noticia">
+                    <h2 class="titulonoticia">Diseño página web Pastelería Délice</h2>
+                    <h5 class="fecha"> Abril 2024 </h5>
+                    <img class="imgnoticia4" src="img/pagina pasteleria.jpg">
+                    <p>Propuesta de una página web para una pasteleria.
+                        <br>
+                        <br>
+                        <a href="https://salroal.github.io/pasteleria/" target="_blank">Pincha aquí para verla</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <br>
+    <a href="index.html" class="logo">Inicio</a>
+</body>
+</html>
